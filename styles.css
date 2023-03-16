@@ -1,0 +1,966 @@
+body {
+  height: auto;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  overflow-x: auto;
+  margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .upper-links {
+    display: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    margin: 0;
+    text-align: center;
+  }
+
+  header {
+    background-image: url("./images/mob-bg-top.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 1rem;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    resize: both;
+    overflow: scroll;
+  }
+
+  .about-header {
+    background-image: url("./images/grey-bg-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 1rem;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    resize: both;
+    overflow: scroll;
+  }
+
+  /* dropdown menu start */
+  .container {
+    cursor: pointer;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  .nav-bar ul {
+    display: none;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 25px;
+    height: 4px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+
+  .change .bar1 {
+    transform: translate(2px, 8px) rotate(-45deg);
+    background-color: #333;
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    width: 25px;
+    transform: translate(2px, -8px) rotate(45deg);
+    background-color: #333;
+  }
+
+  .accordion {
+    align-self: center;
+    color: #444;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+
+  #panel {
+    display: none;
+    overflow: hidden;
+    padding-bottom: 4%;
+    margin-top: -2rem;
+  }
+
+  .main-program a {
+    margin-bottom: 3rem;
+  }
+
+  #panel a {
+    display: flex;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #3a4a42;
+    flex: 100%;
+    background: whitesmoke;
+    width: 8.5rem;
+    border: 1px solid black;
+    margin-bottom: 1%;
+    border-radius: 4px;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+  }
+
+  .drop-link {
+    display: inline-block;
+  }
+
+  .nav-bar {
+    display: flex;
+  }
+
+  nav {
+    margin-bottom: 3rem;
+  }
+
+  main {
+    margin-top: 0;
+  }
+
+  .conference-title h2 {
+    text-align: left;
+    font-weight: 500;
+    color: #fd4314;
+    font-size: 1.5rem;
+  }
+
+  .conference-title h1 {
+    text-align: left;
+    padding-top: 4%;
+    font-weight: 900;
+    font-size: 1.7rem;
+  }
+
+  .conference-title img {
+    width: 60%;
+  }
+
+  .about-conference-title h2 {
+    text-align: center;
+    font-weight: 500;
+    color: #fd4314;
+    font-size: 1.5rem;
+  }
+
+  .about-conference-title h1 {
+    text-align: center;
+    padding-top: 4%;
+    font-weight: 900;
+    font-size: 1.7rem;
+    color: #f63b21;
+  }
+
+  .conference-hr {
+    display: none;
+  }
+
+  .title-intro {
+    width: 90%;
+    text-align: center;
+    margin-top: 1.5rem;
+    background-color: #f8f8f8;
+    opacity: 0.8;
+    border: 1px solid white;
+    border-radius: 8px;
+  }
+
+  .title-intro img {
+    width: 20%;
+    position: absolute;
+    top: 14rem;
+    right: 6%;
+    z-index: -1;
+  }
+
+  .summit-intro {
+    width: 85%;
+    text-align: center;
+    margin-top: 3rem;
+    background-image: linear-gradient(to right, #fff, #ebebeb);
+    border: 1px solid #f8f8f8;
+    border-radius: 2px;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+  }
+
+  .summit-intro img {
+    width: 20%;
+    position: absolute;
+    top: 14rem;
+    right: 6%;
+    z-index: -1;
+  }
+
+  .summit-intro p {
+    line-height: 2rem;
+  }
+
+  .plz-contact {
+    text-align: center;
+    margin: 2rem 1rem;
+    width: 90%;
+    line-height: 1.7rem;
+  }
+
+  .dt-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    background-color: cornsilk;
+    border: 1px solid white;
+    border-radius: 8px;
+    fill-opacity: 0.5;
+    width: 90%;
+  }
+
+  .dt-container h4 {
+    font-weight: 700;
+    color: #272a31;
+    font-size: 1.3rem;
+  }
+
+  .extra-div {
+    display: none;
+  }
+
+  .dt-item1 {
+    flex: 10%;
+    height: 60%;
+  }
+
+  .dt-item1 img {
+    width: 80%;
+  }
+
+  .dt-item2 {
+    flex: 70%;
+  }
+
+  .dt-item3 {
+    flex: 100%;
+    align-content: center;
+  }
+
+  .dt-item3 p {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .main-program {
+    background-image: url("./images/dot-bg-1.jpg");
+    background-size: 100%;
+    text-align: center;
+  }
+
+  .main-program hr {
+    border-top: 0.3rem solid #ff4f38;
+    margin-top: -0.5rem;
+    width: 15%;
+    margin-bottom: 3rem;
+  }
+
+  .main-program h2 {
+    color: #fff;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .program-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .program-item {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    background-color: #272a31;
+    width: 90%;
+    margin-bottom: 2%;
+    padding: 3%;
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+
+  .program-img {
+    width: 10%;
+  }
+
+  .program-name {
+    width: 25%;
+    color: #ec5242;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-align: center;
+    text-overflow: initial;
+    padding-top: 5%;
+  }
+
+  .program-desc {
+    width: 65%;
+    color: white;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    align-self: center;
+    padding-left: 3%;
+  }
+
+  .main-program .see-whole {
+    display: none;
+  }
+
+  .join-summit {
+    margin-top: 2rem;
+    padding: 2rem 3rem;
+    background-color: #ff4f38;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+  }
+
+  .speakers {
+    text-align: center;
+  }
+
+  .speakers h2 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .speakers-header-hr {
+    border-top: 0.3rem solid #ff4f38;
+    width: 15%;
+    margin-bottom: 3rem;
+  }
+
+  .speakers-detail {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .speaker {
+    flex: 100%;
+  }
+
+  .speaker-flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .speaker-det {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid grey;
+    border-radius: 8px;
+  }
+
+  .speaker-hr {
+    border-top: 0.3rem solid grey;
+    width: 5%;
+    display: flex;
+    margin-bottom: 1rem;
+    float: left;
+    clear: right;
+  }
+
+  .speaker-img {
+    align-self: center;
+  }
+
+  .speaker-img img {
+    width: 100%;
+  }
+
+  .speaker-designation {
+    color: #ff4f38;
+    font-style: italic;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .speaker-name,
+  .speaker-designation,
+  .speaker-detail {
+    text-align: left;
+  }
+
+  .speakers .speaker-desktop {
+    display: none;
+  }
+
+  .more {
+    text-decoration: none;
+    color: #272a31;
+    padding: 1rem 2rem;
+    border: 2px solid gainsboro;
+    border-radius: 8px;
+    display: inline-block;
+    width: 75%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .more i {
+    color: #ff4f38;
+    margin-left: 0.5rem;
+  }
+
+  .summit-logo {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .summit-logo hr {
+    border-top: 0.3rem solid #ff4f38;
+    width: 15%;
+    margin-bottom: 1.5rem;
+  }
+
+  .summit-logo p {
+    padding: 1rem 2rem;
+  }
+
+  .summit-logo img {
+    margin: 1%;
+    padding: 2% 2%;
+    border: 1px solid grey;
+  }
+
+  .separator {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .desktop-intro {
+    display: none;
+  }
+
+  .summit-det {
+    display: none;
+  }
+
+  .desktop-creative {
+    display: none;
+  }
+
+  .past-summit {
+    text-align: center;
+  }
+
+  .past-summit hr {
+    border-top: 0.3rem solid #ff4f38;
+    width: 15%;
+    margin-bottom: 1.5rem;
+  }
+
+  .past-summit p {
+    padding: 1rem 2rem;
+  }
+
+  .past-summit-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .past-summit-flex > div {
+    flex: 100%;
+  }
+
+  .past-summit img {
+    max-width: 85%;
+    padding: 0.5rem 2rem;
+  }
+
+  .partners {
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+    height: auto;
+  }
+
+  .partners2 {
+    display: none;
+  }
+
+  .partners img {
+    width: 100%;
+  }
+
+  .partners-desktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  header {
+    width: 100%;
+    background-image: url('./images/mob-bg-top.avif');
+    background-position-y: 8rem;
+    background-repeat: no-repeat;
+  }
+
+  .upper-links {
+    background-color: #3e3e3e;
+    width: 100%;
+    text-align: right;
+    float: right;
+  }
+
+  .upper-links i,
+  .upper-links a {
+    color: white;
+    margin-right: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+  }
+
+  .upper-links a {
+    text-decoration: none;
+  }
+
+  #panel {
+    display: none;
+  }
+
+  #logo {
+    display: inline;
+    margin-right: 9%;
+    margin-left: 5%;
+  }
+
+  .title-intro img {
+    width: 10%;
+    position: absolute;
+    left: 70%;
+    top: 100%;
+  }
+
+  .dt-container img {
+    width: 10%;
+  }
+
+  .summit-intro img {
+    width: 20%;
+    position: absolute;
+    top: 14rem;
+    right: 6%;
+    z-index: -1;
+  }
+
+  .summit-logo img {
+    margin-top: 2rem;
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+    padding: 2rem 4rem;
+  }
+
+  .past-summit-flex img {
+    width: 90%;
+  }
+
+  footer {
+    height: auto;
+  }
+
+  .partners-desktop {
+    height: auto;
+  }
+
+  .partners-desktop img {
+    width: 100%;
+  }
+
+  .conference-title img {
+    width: 60%;
+  }
+
+  .partners2 img {
+    width: 100%;
+  }
+
+  #logo img {
+    max-width: 12%;
+  }
+
+  .nav-bar {
+    width: 90%;
+    position: relative;
+    padding-left: 10%;
+  }
+
+  .nav-bar a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .nav-bar ul {
+    list-style-type: none;
+    display: inline;
+    position: absolute;
+    padding-top: 1rem;
+    width: 60%;
+  }
+
+  .nav-bar li {
+    display: inline;
+    margin-left: 2%;
+    height: 3rem;
+  }
+
+  .nav-bar li:last-child {
+    border: 2px solid red;
+    padding: 7px;
+  }
+
+  .nav-bar li:last-child a {
+    color: red;
+    font-weight: 600;
+  }
+
+  .nav-bar li:first-child a {
+    color: red;
+  }
+
+  .conference-title {
+    margin-top: 8rem;
+    margin-left: 10%;
+  }
+
+  .conference-title h2 {
+    text-align: left;
+    font-weight: 400;
+    color: #fd4314;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+
+  .conference-title h1 {
+    margin-top: 0;
+    text-align: left;
+    padding-top: 1%;
+    font-weight: 900;
+    font-size: 4rem;
+    background-size: 100%;
+  }
+
+  .title-intro p {
+    width: 45%;
+    margin-left: 10%;
+    line-height: 1.5rem;
+    background-color: #f7f7f7;
+    padding: 1rem;
+    border: 1px solid white;
+    border-radius: 4px;
+  }
+
+  .dt-container {
+    margin-left: 10%;
+  }
+
+  .dt-item2 h4 {
+    font-size: 2.5rem;
+    color: #575757;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .dt-item3 p {
+    padding-bottom: 10%;
+    color: #575757;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  .main-program {
+    background-image: url("./images/dot-bg-1.jpg");
+    background-size: 100%;
+    text-align: center;
+    padding-bottom: 6rem;
+  }
+
+  .main-program hr {
+    border-top: 0.3rem solid #ff4f38;
+    width: 5%;
+    margin-bottom: 3rem;
+  }
+
+  .main-program h2 {
+    color: #fff;
+    padding-top: 5%;
+    padding-bottom: 0.5%;
+  }
+
+  .program-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 4rem;
+  }
+
+  .program-item {
+    background-color: #272a31;
+    display: grid;
+    grid-template-columns: auto;
+    width: 15%;
+    height: 100%;
+    padding-top: 25px;
+    margin-left: 5px;
+    margin-bottom: 2.5rem;
+  }
+
+  .program-img {
+    width: 4rem;
+    margin: auto 30%;
+  }
+
+  .program-name {
+    color: #ec5242;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .program-desc {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+  }
+
+  .main-program .join-summit {
+    display: none;
+  }
+
+  .main-program .see-whole {
+    text-decoration: none;
+    color: white;
+    font-size: 1.25rem;
+  }
+
+  .speakers {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding-top: 2rem;
+  }
+
+  .speakers h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+
+  .speakers-detail,
+  .more {
+    display: none;
+  }
+
+  .speakers-header-hr {
+    border-top: 0.3rem solid #ff4f38;
+    margin-top: -0.5rem;
+    width: 5%;
+    margin-bottom: 3rem;
+  }
+
+  .speaker-desktop {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: fit-content;
+    padding-left: 10%;
+  }
+
+  .speaker-det {
+    display: grid;
+    grid-template-columns: 35% 60%;
+    width: 45%;
+    height: auto;
+  }
+
+  .speaker-name,
+  .speaker-designation,
+  .speaker-detail {
+    text-align: left;
+  }
+
+  .speaker-img {
+    width: 100%;
+    height: 65%;
+  }
+
+  .inner-speaker {
+    margin-left: 5%;
+  }
+
+  .speaker-designation {
+    width: 100%;
+    color: #ff4f38;
+    font-style: italic;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .speaker-detail {
+    width: 100%;
+  }
+
+  .speaker-hr {
+    width: 5%;
+    float: left;
+  }
+
+  .partners2 {
+    display: flex;
+  }
+
+  .about-header {
+    background-image: url('./images/mob-bg-top.avif');
+    background-position-y: 8rem;
+    background-repeat: no-repeat;
+  }
+
+  .about-conference-title {
+    margin-top: 8rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-conference-title h2 {
+    display: none;
+  }
+
+  .about-conference-title h1 {
+    margin-top: 0;
+    text-align: center;
+    padding-top: 1%;
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: #f63b21;
+    background-size: 100%;
+  }
+
+  .conference-hr {
+    border-top: 0.3rem solid #ff4f38;
+    margin-top: -0.5rem;
+    width: 5%;
+    margin-bottom: 3rem;
+  }
+
+  .mob-intro {
+    display: none;
+  }
+
+  .summit-intro {
+    width: 70%;
+    background-image: linear-gradient(to right, #ebebeb, #fff);
+    border: 1px solid #f8f8f8;
+    border-radius: 2px;
+    margin: 3rem 15% auto 15%;
+  }
+
+  .summit-intro p {
+    line-height: 2rem;
+    text-align: center;
+  }
+
+  .plz-contact {
+    text-align: center;
+    line-height: 1.7rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .mobile-creative {
+    display: none;
+  }
+
+  .desktop-creative {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .summit-logo {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .summit-logo hr {
+    border-top: 0.3rem solid #ff4f38;
+    width: 5%;
+  }
+
+  .summit-logo p {
+    padding-left: 14%;
+    padding-right: 14%;
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+  }
+
+  .summit-det {
+    margin-top: -0.5rem;
+  }
+
+  .past-summit {
+    text-align: center;
+  }
+
+  .past-summit h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .past-summit hr {
+    border-top: 0.3rem solid #ff4f38;
+    width: 5%;
+  }
+
+  .past-summit p {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .past-summit-flex {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    margin-bottom: 3.5rem;
+  }
+
+  .past-summit-flex > div {
+    width: 50%;
+  }
+
+  .partners {
+    display: none;
+  }
+}
