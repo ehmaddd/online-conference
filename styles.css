@@ -114,6 +114,10 @@ body {
     padding-bottom: 1.5%;
   }
 
+  #panel ul {
+    list-style-type: none;
+  }
+
   .drop-link {
     display: inline-block;
   }
@@ -148,7 +152,7 @@ body {
     width: 60%;
   }
 
-  .about-conference-title h2 {
+  .about-conference-title p {
     text-align: center;
     font-weight: 500;
     color: #fd4314;
@@ -372,8 +376,6 @@ body {
     align-items: stretch;
     gap: 10px;
     padding: 10px;
-    border: 2px solid grey;
-    border-radius: 8px;
   }
 
   .speaker-hr {
@@ -513,13 +515,75 @@ body {
   .partners-desktop {
     display: none;
   }
+
+  .rights-reserved {
+    display: none;
+  }
+
+  .about-partners {
+    text-align: center;
+    background-color: #414246;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .about-partners h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-top: 2rem;
+    color: #8e8e8e;
+  }
+
+  .about-partners hr {
+    border-top: 0.3rem solid #ff4f38;
+    width: 5%;
+  }
+
+  .about-partner-detail {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 2rem;
+  }
+
+  .about-partner-detail img {
+    flex: 20%;
+    margin-right: 2%;
+    margin-bottom: 1.5rem;
+    padding: 5%;
+  }
+
+  .about-rights-reserved {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    flex: 100%;
+  }
+
+  .about-rights-reserved img {
+    flex: 15%;
+    padding: 5% 3%;
+  }
+
+  .about-rights-reserved p {
+    flex: 60%;
+    text-align: left;
+    margin-top: 5%;
+    font-size: 1rem;
+    font-weight: 500;
+  }
 }
+
+/* ------------- DESKTOP VERSION -------------  */
 
 @media only screen and (min-width: 769px) {
   header {
     width: 100%;
     background-image: url('./images/mob-bg-top.avif');
-    background-position-y: 8rem;
+    background-position-y: 10rem;
     background-repeat: no-repeat;
   }
 
@@ -537,6 +601,14 @@ body {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     cursor: pointer;
+  }
+
+  .upper-links ul {
+    list-style-type: none;
+  }
+
+  .upper-links li {
+    display: inline;
   }
 
   .upper-links a {
@@ -588,19 +660,32 @@ body {
   }
 
   .partners-desktop {
-    height: auto;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    flex: 100%;
   }
 
   .partners-desktop img {
-    width: 100%;
+    flex: 15%;
+    padding: 5% 12%;
   }
 
   .conference-title img {
     width: 60%;
   }
 
-  .partners2 img {
-    width: 100%;
+  .partner-detail img {
+    flex: 10%;
+    margin-left: 1%;
+    padding: 2%;
+    max-width: 8%;
+  }
+
+  .rights-reserved img {
+    flex: 15%;
+    padding: 5% 12%;
   }
 
   #logo img {
@@ -728,10 +813,16 @@ body {
     display: grid;
     grid-template-columns: auto;
     width: 15%;
-    height: 100%;
+    height: 20rem;
     padding-top: 25px;
     margin-left: 5px;
     margin-bottom: 2.5rem;
+    overflow: hidden;
+    opacity: 0.7;
+  }
+
+  .program-item:hover {
+    border: 2px solid white;
   }
 
   .program-img {
@@ -767,6 +858,7 @@ body {
     text-align: center;
     background-color: #f8f8f8;
     padding-top: 2rem;
+    padding-bottom: 4rem;
   }
 
   .speakers h2 {
@@ -835,13 +927,9 @@ body {
     float: left;
   }
 
-  .partners2 {
-    display: flex;
-  }
-
   .about-header {
     background-image: url('./images/mob-bg-top.avif');
-    background-position-y: 8rem;
+    background-position-y: 10rem;
     background-repeat: no-repeat;
   }
 
@@ -851,7 +939,7 @@ body {
     text-align: center;
   }
 
-  .about-conference-title h2 {
+  .about-conference-title p {
     display: none;
   }
 
@@ -964,7 +1052,72 @@ body {
     display: none;
   }
 
+  .partners-desktop p {
+    flex: 60%;
+    text-align: left;
+    margin-top: 5%;
+    height: 80%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .partners2 {
+    text-align: center;
+    background-color: #414246;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .partners2 h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-top: 2rem;
+    color: #8e8e8e;
+  }
+
+  .partner-hr {
+    border-top: 0.3rem solid #ff4f38;
+    width: 5%;
+  }
+
+  .partner-detail {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 90%;
+    justify-content: center;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-top: 2rem;
+  }
+
+  .rights-reserved {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    flex: 100%;
+  }
+
+  .rights-reserved p {
+    flex: 60%;
+    text-align: left;
+    margin-top: 5%;
+    height: 80%;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
   .extra-div {
+    display: none;
+  }
+
+  .about-partners {
+    display: none;
+  }
+
+  .about-rights-reserved {
     display: none;
   }
 }
