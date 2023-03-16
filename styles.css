@@ -963,4 +963,8 @@ body {
   .partners {
     display: none;
   }
+
+  .extra-div {
+    display: none;
+  }
 }
